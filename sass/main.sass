@@ -5,6 +5,7 @@
 $blue: #0079C1
 $yellow: #FDB913
 
+
 a
     text-decoration: none
     &:hover
@@ -14,6 +15,7 @@ ul
     list-style-type: none
     padding: 0
     margin: 0
+    margin-bottom: 0
 
 
 
@@ -24,13 +26,17 @@ ul
     height: 79px
     display: flex
     align-items: center
+    justify-content: space-between
 
+.header_menu
+    margin-right: auto
 
 .header_list
     display: flex
     font-size: 12px
     font-weight: 500
     &__item
+        z-index: 10
         position: relative
         white-space: nowrap
         margin-right: 20px
@@ -38,8 +44,6 @@ ul
             color: $textcolor
 
 
-.header_button
-    margin-left: 22px
 
 .button_report
     border-radius: 14px
@@ -64,6 +68,8 @@ ul
 
 
 .more-info
+    
+    background-color: #fff
     visibility: hidden
     opacity: 0
     left: -13px
@@ -99,6 +105,7 @@ ul
 .hover-dropdown
     &:hover
         .more-info
+            z-index: 5
             visibility: visible
             opacity: 1
 
@@ -106,17 +113,91 @@ ul
     display: flex
     justify-content: center
     align-items: center
-    background-image: url(../images/src/bg_prewiev.png)
-    background-size: cover
 
 .prewiev_title
-    background-color: #fff
-    opacity: 0.85
+    margin-top: 169px
+    background-color: rgba(255, 255, 255, 0.85)
     border-radius: 5px
-    
+
+.info
+    background-image: url(../images/src/circle_info.svg)
+    background-size: cover
+    width: 17px
+    height: 17px
+    position: absolute
+    right: 25px
+    bottom: 60px
 
 .main_title
+    font-size: 36px
+    font-weight: 400
+    text-transform: uppercase
+    line-height: 54px
+    padding: 20px 40px 28px 40px
+    letter-spacing: 0.45px
+    margin-bottom: 0
+    margin-bottom: 30px
+    position: relative
+
+
+    span
+        margin-bottom: 0px
+        letter-spacing: normal
+        display: block
+        font-size: 44px
+        font-weight: 800
+    
+.count
+    color: $blue
+    font-size: 36px
+    line-height: 47px
+    font-weight: bold
+    position: relative
+    margin-bottom: 5px
+    &:after
+        position: absolute
+        bottom: 10px
+        right: -23px
+        content: ""
+        background-image: url(../images/src/ruble.svg)
+        width: 16px
+        height: 17px
+.prewiev_features
+    padding: 30px 59px 32px 110px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: rgba(255, 255, 255, 0.85)
+    border-radius: 5px
+    margin-bottom: 229px
+
+    span
+        font-size: 16px
+        line-height: 20px
+
+    &__years
+        display: flex
+        align-items: flex-end
+        justify-content: flex-start
+        span
+            color: $blue
+            font-size: 36px
+            line-height: 47px
+            text-transform: uppercase
+            font-weight: 500
+    &__budget
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        position: relative
+        span
+            max-width: 290px
+        .info
+            width: 12px
+            height: 12px
+            right: -10px
+            bottom: 25px
 
 
         
-        
+@import "media"
